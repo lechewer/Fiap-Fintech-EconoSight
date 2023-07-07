@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/progressbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <title>Home | Econosight</title>
+</head>
+<body>
+    <section>
+        <header>
+            <div class="header-div" id="header-div">
+                <div class="saldo-div">
+                    <h3>Saldo disponível</h3>
+                    <p>R$ 3647,99</p>
+                </div>
+
+                <div class="profile">
+                    <div>
+                        <img class="profile-img" id="profile-img" onclick="adicinarClasse()" src="../images/profileimg.png" alt="Foto de Perfil">
+                    </div>
+                    <div class="menu_flutuante" id="menu_flutuante">
+                        
+                        <ul class="icons" >
+                            <i class="bi bi-x-lg" id="x-icon" onclick="removerClasse()"></i>
+                            <li class="iconsli"><a href="#" class="btn btn-secondary btn-lg active" style="width: 100%;" role="button" aria-pressed="true"><i class="bi bi-person"></i>Perfil</a></li>
+                            <li class="iconsli"><a href="#" class="btn btn-secondary btn-lg active" style="width: 100%;" role="button" aria-pressed="true"><i class="bi bi-credit-card"></i>Cartões</a></li>
+                            <li class="iconsli"><a href="#" class="btn btn-secondary btn-lg active" style="width: 100%;" role="button" aria-pressed="true"><i class="bi bi-gear"></i>Configurações</a></li>
+                        </ul>
+                       
+                    </div>
+                  
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+                <div>
+                    <div class="graph-content">
+                        <h2>Meus Gastos</h2>
+                        <div class="graph-div">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="novas-metas-div">
+                        <div>
+                            <h2 class="metas-h2">Metas</h2>
+                        </div>
+                        <div>
+                            <p class="nova-meta"><i class="bi bi-plus-lg"></i>Nova meta</p>
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="metas">
+                      
+                       
+                        <div class="meta-container">
+                            <h3>Playstation 5</h3>
+                            <div class="meta_img-div">
+                                <div>
+                                    <img src="../images/ps5.png" on alt="PS5 imagem" class="meta_img">
+                                </div>
+                                <div class="progress-details">
+                                    <p class="progress-p">70%</p>
+                                  
+                                </div>
+                                <div class="container-bar">
+                                    
+                                    <div class="progress-bar" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meta-container">
+                            <h3>Astro A40</h3>
+                            <div class="meta_img-div">
+                                <div>
+                                    <img src="../images/astro.png" alt="PS5 imagem" class="meta_img">
+                                </div>
+                                <div class="progress-details">
+                                    <p class="progress-p">50%</p>
+                                    
+                                </div>
+                                
+                                <div class="container-bar">
+                                    <div class="progress-bar" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="../images/logo.png" alt="Logo" class="logo-img">
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 EconoSight</p>
+        </div>
+    </footer>
+    <script src="../js/graph.js"></script>
+
+    <script>
+        let profileImg = document.getElementById('profile-img')
+        let menuFlutuante = document.getElementById('menu_flutuante')
+        let headerDiv = document.getElementById('header-div')
+
+        function adicinarClasse(){
+            menuFlutuante.classList.add('active')
+            headerDiv.classList.add('active')
+        }
+        function removerClasse(){
+            menuFlutuante.classList.remove('active')  
+            headerDiv.classList.remove('active')
+        }
+    </script>
+</body>
+</html>

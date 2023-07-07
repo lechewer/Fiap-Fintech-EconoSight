@@ -1,0 +1,38 @@
+.container-bar {
+    height: 25px;
+    background-color: #CCC;
+
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 8vw;
+}
+.container-bar .progress-bar{
+
+   height: 100%;
+   background-color: #0fd439;
+   border-radius: 50px;
+   
+}
+
+
+.progress-p{
+    margin-top: 8vw;
+    margin-right: 0.6rem;
+}
+@keyframes progress-animation{
+    0% { width: 0%; } 
+    100% { width: 100%}
+}
+
+
+
+@media  screen and (max-width: 960px) {
+    .container-bar {
+        margin-top: 1vw;
+    }
+    .progress-p{
+        margin-top: 0vw;
+        margin-right: 0.6rem;
+    }
+    
+}

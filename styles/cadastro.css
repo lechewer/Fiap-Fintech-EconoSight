@@ -1,0 +1,130 @@
+:root{
+    --green: #0C7C59;
+    --light-silver:#A7A7A7;
+    --silver: #595757;
+    --white: #fff;
+}
+
+
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*img*/
+.logo{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img{
+    width: 80%;
+}
+/* input */
+
+.input-div{
+    max-width: 100%;
+}
+
+.input-div:first-child input{
+    margin-top: -1rem;
+}
+
+.input-div input{
+    border: none;
+    width: 100%;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--silver);
+    color: var(--white);
+    outline: none;
+}
+
+.input-div input:focus, .input-div input:active{
+    border: 2px solid var(--green);
+}
+
+
+::placeholder{
+    color: var(--light-silver);
+    opacity: 1;
+}
+
+::-ms-input-placeholder { 
+    color: var(--light-silver);
+}
+
+/*button*/
+
+.button{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    background-color: var(--green);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: background 0.5s ease;
+}
+
+.button:hover{
+    background: rgba(12, 124, 89, 0.7);
+}
+
+.sign-button{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* esqueci minha senha */
+
+.senha-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.senha-div a{
+    text-decoration: none;
+    color: var(--green);
+    margin-bottom: 2rem;
+   
+}
+
+.senha-div a:hover{
+    color: rgba(12, 124, 89, 0.6);
+}
+
+/*cadastro*/
+
+.login-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-div p{
+    color: #e2e2e2;
+}
+
+.login-div a{
+    color: var(--green);
+    text-decoration: none;
+}
+
+.login-div a:hover{
+    color: rgba(12, 124, 89, 0.7);
+}
